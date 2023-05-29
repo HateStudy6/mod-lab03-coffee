@@ -65,18 +65,19 @@ bool Automata::check() {
 }
 
 void Automata::cancel() {
-    if (state == ACCEPT || state == CHECK) {
+    if (state == ACCEPT || state == CHECK) 
+    {
         getChange();
         cash = 0;
-        state = WAIT;
+        state = WAIT; 
     }
-        else { std::cout << "Error"<< std::endl; }
+    else {std::cout << "Error"<< std::endl;}
 }
 
 void Automata::cook() {
     if (state == COOK) {
         state = COOK;
-        std::cout << "your " << menu[num_drink] << std::endl ;
+        std::cout << "your " << menu[num_drink] << std::endl;
         cash -= prices[current_];
     }
 }
@@ -84,10 +85,10 @@ void Automata::cook() {
 void Automata::finish() {
     if (state == COOK) {
     cash = 0;
-    state = WAIT;  
+    state = WAIT;
     }
 }
 void Automata::getChange(unsigned int price) {
     if (cash - price != 0)
-    std::cout << "your change" << cash - price << std::endl ;
+    std::cout << "your change" << cash - price << std::endl;
 }
