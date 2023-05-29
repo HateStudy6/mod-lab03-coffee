@@ -27,7 +27,7 @@ void Automata::coin(unsigned int summa) {
 }
 
 void Automata::getMenu() {
-    std::cout << "Menu: "<<std::endl;
+    std::cout << "Menu: " << std::endl;
     for (int i = 0; i < sizeof(menu) / sizeof(menu[0]); i++) {
         std::cout << i+1 << "." << menu[i] << " - " << prices[i] << std::endl;
     }
@@ -38,22 +38,18 @@ position  Automata::getState() {
 }
 
 void Automata::choice(unsigned int num) {
-    if (state == ACCEPT) {
-    if ((num > 0) && (sizeof(menu) / sizeof(menu[0]) >= num))
-     {
+    if (state == ACCEPT) 
+ {
+    if ((num > 0) && (sizeof(menu) / sizeof(menu[0]) >= num)) {
         num_drink = num - 1;
         state = CHECK;
         check();
     }
         else
-   {
-        std::cout << "error in selection " << std::endl;
-    }
+   { std::cout << "error in selection " << std::endl; }
     else
-    {
-        std::cout << "error "  << std::endl;
-}
-}
+    { std::cout << "error "  << std::endl; }
+ }
 }
 
 bool Automata::check() {
@@ -72,10 +68,9 @@ void Automata::cancel() {
     if (state == ACCEPT || state == CHECK) {
         getChange();
         cash = 0;
-        state = WAIT;}
-        else {
-        std::cout << "Error"<< std::endl;
+        state = WAIT;
     }
+        else { std::cout << "Error"<< std::endl; }
 }
 
 void Automata::cook() {
