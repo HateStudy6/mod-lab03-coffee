@@ -4,10 +4,10 @@
 int main() {
     Automata aut;
 
-    aut.off();
+   
     aut.on();
-    aut.getMenu();
-    aut.cook();
-    aut.finish();
+    aut.coin(300);
+    aut.choice(2);
+    aut.off();
     return 0;
 }
