@@ -3,7 +3,7 @@
 #include <string>
 
 
-enum position {off, wait, accept, check, cook};
+enum position {OFF, WAIT, ACCEPT, CHECK, COOK};
 
 class Automata {
    
@@ -28,7 +28,6 @@ void coin(unsigned int summa);
 void getMenu();
 position getState();
 void choice(unsigned int num);
-void check();
 void cancel();
  private:
 void check();
