@@ -52,7 +52,7 @@ void Automata::choice(unsigned int num) {
   }
 }
 
-bool Automata::check() {
+void Automata::check() {
     if (state == CHECK) {
         if (cash >= prices[num_drink]) {
             getChange(prices[num_drink]);
