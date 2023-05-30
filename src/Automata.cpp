@@ -66,11 +66,13 @@ void Automata::check() {
 }
 
 void Automata::cancel(){
- if (state == ACCEPT || state == CHECK) {
+ if (state == ACCEPT || state == CHECK)
+ {
      getChange();
      cash = 0;
      state = WAIT;
- } else
+ } 
+ else 
  {
     std::cout << "Error"<< std::endl;
  }
