@@ -70,9 +70,9 @@ void Automata::cancel() {
  cash = 0;
  state = WAIT;
  } 
- else 
-  {std::cout << "Error"<< std::endl;
-  }
+ else
+ { std::cout << "Error"<< std::endl;
+ }
 }
 
 void Automata::cook() {
