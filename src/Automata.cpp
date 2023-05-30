@@ -38,16 +38,16 @@ position  Automata::getState() {
 }
 
 void Automata::choice(unsigned int num) {
-    if (state == ACCEPT)
-  { 
+    if (state == ACCEPT) { 
     if ((num > 0) && (sizeof(menu) / sizeof(menu[0]) >= num)) {
         num_drink = num - 1;
         state = CHECK;
         check();
-    } else
-   {std::cout << "error in selection " << std::endl;
-   } else
-    {std::cout << "error "  << std::endl;}
+    } else {
+        std::cout << "error in selection " << std::endl;
+    } else {
+        std::cout << "error "  << std::endl;
+    }
   }
 }
 
