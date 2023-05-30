@@ -57,16 +57,15 @@ void Automata::check() {
         if (cash >= prices[num_drink]) {
             getChange(prices[num_drink]);
             cook();
-        } else{
+        } else {
             std::cout << "not enough money" << std::endl;
             cancel();
           }
     }
 }
 
-void Automata::cancel(){
- if (state == ACCEPT || state == CHECK)
-  {
+void Automata::cancel() {
+  if (state == ACCEPT || state == CHECK) {
      getChange();
      cash = 0;
      state = WAIT;
