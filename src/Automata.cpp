@@ -43,13 +43,14 @@ void Automata::choice(unsigned int num) {
         num_drink = num - 1;
         state = CHECK;
         check();
-    } else {
-        std::cout << "error in selection " << std::endl;
+        } else {
+            std::cout << "error in selection " << std::endl;
+        }
     } else {
         std::cout << "error "  << std::endl;
     }
-  }
 }
+
 
 void Automata::check() {
     if (state == CHECK) {
