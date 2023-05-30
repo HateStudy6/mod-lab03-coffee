@@ -3,8 +3,7 @@
 
 int main() {
     Automata aut;
-
-   
+ 
     aut.on();
     aut.coin(300);
     aut.choice(2);
