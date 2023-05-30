@@ -81,10 +81,10 @@ void Automata::cancel(){
 
 
 void Automata::cook() {
-    if (state == COOK) {
+    if (state == CHECK) {
         state = COOK;
-        std::cout << "your " << menu[num_drink] << std::endl;
-        cash -= prices[current_];
+        std::cout << "your " << menu[num_drink] << "ready" << std::endl;
+        finish();  
     }
 }
 
