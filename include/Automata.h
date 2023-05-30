@@ -28,7 +28,8 @@ class Automata {
   position getState();
   void choice(unsigned int num);
   void cancel();
-private:
+
+ private:
   void check();
   void cook();
   void finish();

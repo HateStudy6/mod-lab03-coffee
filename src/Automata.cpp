@@ -80,7 +80,7 @@ void Automata::cook() {
     if (state == CHECK) {
         state = COOK;
         std::cout << "your " << menu[num_drink] << "ready" << std::endl;
-        finish();  
+        finish();
     }
 }
 
