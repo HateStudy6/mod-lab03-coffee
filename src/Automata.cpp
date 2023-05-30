@@ -38,7 +38,7 @@ position  Automata::getState() {
 }
 
 void Automata::choice(unsigned int num) {
-    if (state == ACCEPT) { 
+    if (state == ACCEPT) {
     if ((num > 0) && (sizeof(menu) / sizeof(menu[0]) >= num)) {
         num_drink = num - 1;
         state = CHECK;
@@ -57,8 +57,7 @@ void Automata::check() {
         if (cash >= prices[num_drink]) {
             getChange(prices[num_drink]);
             cook();
-        } else 
-        {
+        } else{
             std::cout << "not enough money" << std::endl;
             cancel();
           }
@@ -67,15 +66,13 @@ void Automata::check() {
 
 void Automata::cancel(){
  if (state == ACCEPT || state == CHECK)
- {
+  {
      getChange();
      cash = 0;
      state = WAIT;
- } 
- else 
- {
+  } else {
     std::cout << "Error"<< std::endl;
- }
+  }
 }
 
 
