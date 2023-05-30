@@ -44,10 +44,8 @@ void Automata::choice(unsigned int num) {
         num_drink = num - 1;
         state = CHECK;
         check();
-    }
-        else
-   { std::cout << "error in selection " << std::endl; }
-    else
+    } else
+   { std::cout << "error in selection " << std::endl; } else
     { std::cout << "error "  << std::endl; }
   }
 }
@@ -60,7 +58,7 @@ void Automata::check() {
         } else 
         {
             std::cout << "not enough money" << std::endl;
-            canel();
+            cancel();
           }
     }
 }
