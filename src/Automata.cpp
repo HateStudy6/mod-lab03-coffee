@@ -45,8 +45,9 @@ void Automata::choice(unsigned int num) {
         state = CHECK;
         check();
     } else
-   { std::cout << "error in selection " << std::endl; } else
-    { std::cout << "error "  << std::endl; }
+   {std::cout << "error in selection " << std::endl;
+   } else
+    {std::cout << "error "  << std::endl;}
   }
 }
 
