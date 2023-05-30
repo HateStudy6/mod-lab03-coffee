@@ -57,23 +57,26 @@ bool Automata::check() {
         if (cash >= prices[num_drink]) {
             getChange(prices[num_drink]);
             cook();
-        } else {
+        } else 
+        {
             std::cout << "not enough money" << std::endl;
             canel();
           }
     }
 }
 
-void Automata::cancel() {
+void Automata::cancel(){
  if (state == ACCEPT || state == CHECK) {
- getChange();
- cash = 0;
- state = WAIT;
- } 
- else
- { std::cout << "Error"<< std::endl;
+     getChange();
+     cash = 0;
+     state = WAIT;
+ } else
+ {
+    std::cout << "Error"<< std::endl;
  }
 }
+
+
 
 void Automata::cook() {
     if (state == COOK) {
